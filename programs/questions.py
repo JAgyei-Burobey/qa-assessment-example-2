@@ -31,7 +31,17 @@ def one(word, chars):
     # There are 86,400 seconds in a day, and 3600 seconds in an hour
 
 def two(total_seconds):
-    pass
+    total_seconds = total_seconds % (1 * 86400)
+    day = total_seconds // 86400
+    total_seconds %= 86400
+    hour = total_seconds // 3600
+    total_seconds %= 3600
+    minutes = total_seconds // 60
+    total_seconds %= 60
+
+    return f"{day}", f"{hour}", f"{minutes}", f"{total_seconds}"
+
+print(two(86500))
 
     # <QUESTION 3>
 
