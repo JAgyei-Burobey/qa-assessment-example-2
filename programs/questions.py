@@ -11,8 +11,8 @@
     # one("didgeridoo", "do") → "_i_geri___"
     # one("punctation, or something?", " ,?") → "punctuation__or_something_"
 
-# def one(word, chars):
-#     return word.casefold().replace(chars, "_")
+def one(word, chars):
+    return word.casefold().replace(chars, "_")
 
 
     # <QUESTION 2>
@@ -30,16 +30,16 @@
 
     # There are 86,400 seconds in a day, and 3600 seconds in an hour
 
-# def two(total_seconds):
-#     total_seconds = total_seconds % (1 * 86400)
-#     day = total_seconds // 86400
-#     total_seconds %= 86400
-#     hour = total_seconds // 3600
-#     total_seconds %= 3600
-#     minutes = total_seconds // 60
-#     total_seconds %= 60
+def two(total_seconds):
+    total_seconds = total_seconds % (1 * 86400)
+    day = total_seconds // 86400
+    total_seconds %= 86400
+    hour = total_seconds // 3600
+    total_seconds %= 3600
+    minutes = total_seconds // 60
+    total_seconds %= 60
 
-#     return f"{day}", f"{hour}", f"{minutes}", f"{total_seconds}"
+    return f"{day}", f"{hour}", f"{minutes}", f"{total_seconds}"
 
 
 
@@ -65,7 +65,6 @@ def three(dictionary):
     return rev_dictionary
 
 
-print(three({"hello":"hola", "thank you":"gracias"}))
 
     # <QUESTION 4>
 
@@ -82,7 +81,12 @@ print(three({"hello":"hola", "thank you":"gracias"}))
     # four(-10) → 5
 
 def four(number):
-    pass
+    largest_divisor = 0
+    for i in range (1, number):
+        if number % i == 0:
+            largest_divisor = i
+    return largest_divisor
+
 
     # <QUESTION 5>
 
