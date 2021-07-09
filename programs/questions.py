@@ -12,7 +12,8 @@
     # one("punctation, or something?", " ,?") → "punctuation__or_something_"
 
 def one(word, chars):
-    pass
+    return word.casefold().replace(chars, "_")
+
 
     # <QUESTION 2>
 
